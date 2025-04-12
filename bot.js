@@ -229,7 +229,7 @@ function rpc(type) {
         .setStartTimestamp(Date.now())
         .setAssetsLargeImage("1253758464816054282")
         .setAssetsLargeText("OwO Farm Bot Stable")
-        .addButton("Farm Bot", "https://github.com/Mid0aria/owofarmbot_stable")
+        .addButton("Farm Bot", "https://github.com/Mid0Hub/owofarmbot_stable")
         .addButton("Discord", "https://discord.gg/WzYXVbXt6C");
 
     if (config.settings.discordrpc) {

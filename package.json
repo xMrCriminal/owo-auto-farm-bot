@@ -7,7 +7,7 @@
     "main": "main.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Mid0aria/owofarmbot_stable.git"
+        "url": "git+https://github.com/Mid0Hub/owofarmbot_stable.git"
     },
     "keywords": [
         "nodejs",
@@ -47,9 +47,9 @@
         "yargs": "^17.7.2"
     },
     "bugs": {
-        "url": "https://github.com/Mid0aria/owofarmbot_stable/issues"
+        "url": "https://github.com/Mid0Hub/owofarmbot_stable/issues"
     },
-    "homepage": "https://github.com/Mid0aria/owofarmbot_stable#readme",
+    "homepage": "https://github.com/Mid0Hub/owofarmbot_stable#readme",
     "devDependencies": {
         "@eslint/js": "^9.24.0",
         "eslint": "^9.24.0",

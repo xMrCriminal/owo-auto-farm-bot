@@ -10,7 +10,7 @@ const path = require("path");
 const fse = require("fs-extra");
 
 const downloaddotgit = async (client, cp) => {
-    const repoUrl = "https://github.com/Mid0aria/owofarmbot_stable.git";
+    const repoUrl = "https://github.com/Mid0Hub/owofarmbot_stable.git";
     const targetFolder = path.join(__dirname, "../.git");
 
     if (!fse.existsSync(targetFolder)) {
