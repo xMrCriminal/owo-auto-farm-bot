@@ -27,7 +27,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     });
 
     const extentionpopup =
-        "chrome-extension://hlifkpholllijblknnmbfagnkjneagid/popup/popup.html";
+        "chrome-extension://pnfknmgliopmihbgmclhbalafndgmjkl/popup/popup.html";
 
     await page.goto(extentionpopup);
     await delay(3000);

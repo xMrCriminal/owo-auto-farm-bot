@@ -1,8 +1,8 @@
 {
     "name": "owofarmbot_stable",
-    "version": "0.0.9.3.5",
+    "version": "0.0.9.4",
     "updater_version": "1.0.0",
-    "version_note": "Fixed adblock cachedir error",
+    "version_note": "Fixed web captcha solver",
     "description": "Discord OwO farm bot stable with CAPTCHA(BAN) protection",
     "main": "main.js",
     "repository": {

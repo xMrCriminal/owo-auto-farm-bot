@@ -81,7 +81,7 @@ if (!fse.existsSync(adblockcachedir)) {
         const authUrl =
             "https://discord.com/api/v9/oauth2/authorize?client_id=408785106942164992&response_type=code&redirect_uri=https%3A%2F%2Fowobot.com%2Fapi%2Fauth%2Fdiscord%2Fredirect&scope=identify%20guilds%20email%20guilds.members.read";
         const extentionpopup =
-            "chrome-extension://hlifkpholllijblknnmbfagnkjneagid/popup/popup.html";
+            "chrome-extension://pnfknmgliopmihbgmclhbalafndgmjkl/popup/popup.html";
 
         const userToken = argv.token;
 
