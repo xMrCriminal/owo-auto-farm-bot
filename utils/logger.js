@@ -95,31 +95,53 @@ module.exports = (client) => {
         });
 
         try {
+            // Ensure data directory exists
+            if (!fs.existsSync("./data")) {
+                fs.mkdirSync("./data", { recursive: true });
+            }
+
             fs.readdir("./data", (err, files) => {
+                if (err) {
+                    console.error("Error reading data directory:", err);
+                    return;
+                }
+
                 const logFiles = files
                     .filter((file) => file.endsWith(".log"))
-                    .map((file) => ({
-                        name: file,
-                        time: fs
-                            .statSync(path.join("./data", file))
-                            .mtime.getTime(),
-                    }))
+                    .map((file) => {
+                        const filePath = path.join("./data", file);
+                        try {
+                            // Check if file exists before getting stats
+                            if (fs.existsSync(filePath)) {
+                                return {
+                                    name: file,
+                                    time: fs.statSync(filePath).mtime.getTime(),
+                                };
+                            }
+                            return null;
+                        } catch (err) {
+                            console.error(
+                                `Error getting stats for ${file}:`,
+                                err,
+                            );
+                            return null;
+                        }
+                    })
+                    .filter((file) => file !== null) // Remove null entries
                     .sort((a, b) => a.time - b.time);
 
-                logFiles
-                    .slice(0, logFiles.length - 5)
-                    .forEach((file) =>
-                        fs.unlink(path.join("./data", file.name), (err) => {}),
-                    );
+                // Keep only the 5 most recent log files, delete the rest
+                logFiles.slice(0, logFiles.length - 5).forEach((file) => {
+                    const filePath = path.join("./data", file.name);
+                    fs.unlink(filePath, (err) => {
+                        if (err) {
+                            console.error(`Error deleting ${file.name}:`, err);
+                        }
+                    });
+                });
             });
         } catch (e) {
-            client.logger.alert(
-                "Bot",
-                "Logger",
-                "Failed to delete old log file: ",
-                e,
-            );
-            client.logger.debug(e);
+            console.error("Failed to manage log files:", e);
         }
 
         if (color != client.chalk.white) {
