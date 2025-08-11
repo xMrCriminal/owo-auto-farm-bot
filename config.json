@@ -2,29 +2,29 @@
     "firstrun": "true",
     "prefix": "!",
     "main": {
-        "token": "",
-        "userid": "",
-        "commandschannelid": "",
-        "huntbotchannelid": "",
-        "owodmchannelid": "",
+        "token": "MTI2NDQ0MTAxNTY2MjY3Mzk3MA.GDkAH4.uohy6upRKPBl6QCxkxaazF0iYD-emwVLR05Lew",
+        "userid": "1264441015662673970",
+        "commandschannelid": "1329114443056943188",
+        "huntbotchannelid": "1329114443056943189",
+        "owodmchannelid": "1329389377952026665",
         "gamblechannelid": "",
-        "autoquestchannelid": "",
-        "autostart": false,
+        "autoquestchannelid": "1329114443056943192",
+        "autostart": true,
 
         "commands": {
             "hunt": true,
             "battle": true,
-            "pray": false,
+            "pray": true,
             "curse": true,
             "huntbot": {
                 "enable": true,
                 "maxtime": 10,
-                "upgrade": false,
-                "upgradetype": "duration"
+                "upgrade": true,
+                "upgradetype": "100"
             },
             "gamble": {
-                "coinflip": true,
-                "slot": true
+                "coinflip": false,
+                "slot": false
             },
             "animals": false,
             "inventory": true,
@@ -42,13 +42,13 @@
         "owodmchannelid": "",
         "gamblechannelid": "",
         "autoquestchannelid": "",
-        "autostart": false,
+        "autostart": true,
 
         "commands": {
             "hunt": true,
             "battle": true,
-            "pray": false,
-            "curse": true,
+            "pray": true,
+            "curse": false,
             "huntbot": {
                 "enable": true,
                 "maxtime": 10,
@@ -57,8 +57,8 @@
             },
             "tomain": true,
             "gamble": {
-                "coinflip": true,
-                "slot": true
+                "coinflip": false,
+                "slot": false
             },
             "animals": false,
             "inventory": true,
@@ -78,8 +78,8 @@
         "checklist": {
             "types": {
                 "daily": true,
-                "cookie": false,
-                "vote": false
+                "cookie": true,
+                "vote": true
             }
         },
 
@@ -93,14 +93,14 @@
         },
         "gamble": {
             "coinflip": {
-                "default_amount": 1000,
-                "max_amount": 250000,
-                "multiplier": 1.0
+                "default_amount": 0,
+                "max_amount": 0,
+                "multiplier": 0
             },
             "slot": {
-                "default_amount": 1000,
-                "max_amount": 250000,
-                "multiplier": 1.0
+                "default_amount": 0,
+                "max_amount": 0,
+                "multiplier": 0
             }
         },
 
@@ -120,12 +120,12 @@
             "autosolve": true,
             "autosolve_thread": 1,
             "alerttype": {
-                "webhook": true,
+                "webhook": false,
                 "webhookurl": "xxx",
                 "desktop": {
                     "force": true,
                     "notification": true,
-                    "prompt": true
+                    "prompt": false
                 },
                 "termux": {
                     "notification": true,
@@ -172,12 +172,12 @@
             "min": 316000
         },
         "coinflip": {
-            "max": 32000,
-            "min": 16000
+            "max": 0,
+            "min": 0
         },
         "slot": {
-            "max": 32000,
-            "min": 16000
+            "max": 0,
+            "min": 0
         },
         "animals": {
             "max": 661000,
